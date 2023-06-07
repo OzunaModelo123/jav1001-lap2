@@ -42,3 +42,15 @@ fun arrayContains(inputArray: Array<Int>, target: Int): Boolean {
     }
     return false
 }
+fun reverseArray(inputArray: Array<Int>): Array<Int> {
+    val result = Array(inputArray.size) { 0 } // result is the same size as input with all elems = 0
+    val stack = ArrayDeque<Int>()
+    for (num in inputArray) {
+        stack.addLast(num) // equivalent of push for a normal stack
+    }
+    var index = 0
+    while (stack.isNotEmpty()) {
+        result[index++] = stack.removeLast()
+    }
+    return result
+}
