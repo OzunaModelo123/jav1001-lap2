@@ -1,6 +1,13 @@
 fun main() {
     averageArrayTester()
     println(arrayContains(arrayOf(1, 2, 3), 2)) // expect: true
+    val intArray = arrayOf(1, 2, 3, 4, 5)
+    val reversedIntArray = reverseArray(intArray)
+    println("Reversed Int Array: ${reversedIntArray.joinToString()}")
+
+    val inputString = "Hello, World!"
+    val reversedString = reverseArray(inputString)
+    println("Reversed String: $reversedString")
 }
 /**
  * This function takes in an array of integers and calculates the average value of the numbers.
