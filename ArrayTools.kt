@@ -49,6 +49,12 @@ fun arrayContains(inputArray: Array<Int>, target: Int): Boolean {
     }
     return false
 }
+/**
+ * Reverses the order of elements in an array and returns a new array with the reversed order.
+ *
+ * @param inputArray The array to be reversed.
+ * @return A new array with the elements in reverse order.
+ */
 fun reverseArray(inputArray: Array<Int>): Array<Int> {
     val result = Array(inputArray.size) { 0 } // result is the same size as input with all elems = 0
     val stack = ArrayDeque<Int>()
@@ -61,6 +67,12 @@ fun reverseArray(inputArray: Array<Int>): Array<Int> {
     }
     return result
 }
+/**
+ * Reverses the order of characters in a string and returns a new string with the reversed order.
+ *
+ * @param input The string to be reversed.
+ * @return A new string with the characters in reverse order.
+ */
 fun reverseArray(input: String): String {
     var result = ""
     val stack = ArrayDeque<Char>()
