@@ -54,3 +54,14 @@ fun reverseArray(inputArray: Array<Int>): Array<Int> {
     }
     return result
 }
+fun reverseArray(input: String): String {
+    var result = ""
+    val stack = ArrayDeque<Char>()
+    for (char in input) {
+        stack.addLast(char) // equivalent of push for a normal stack
+    }
+    while (stack.isNotEmpty()) {
+        result = "$result${stack.removeLast()}"
+    }
+    return result
+}
