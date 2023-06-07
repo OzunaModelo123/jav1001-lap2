@@ -89,7 +89,20 @@ fun reverseArray(input: String): String {
     }
     return result
 }
-
+/**
+ * Encrypts a string using the Caesar cipher technique.
+ *
+ * The Caesar cipher is a simple substitution cipher that shifts the letters of the input string
+ * by a specified number of positions in the alphabet. The encryption process preserves the
+ * case of the letters while leaving non-alphabetic characters unchanged.
+ *
+ * @param input The string to be encrypted.
+ * @param shift The number of positions to shift the letters in the alphabet.
+ *              A positive value indicates right shift, while a negative value indicates left shift.
+ *              The shift value is normalized to handle shifts greater than 26, ensuring it wraps
+ *              around the alphabet.
+ * @return The encrypted string.
+ */
 fun caesarCipherEncrypt(input: String, shift: Int): String {
     val shiftedString = StringBuilder()
     val normalizedShift = shift % 26 // Normalize the shift value to handle values outside the range of 0-25
