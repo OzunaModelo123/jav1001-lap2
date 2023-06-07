@@ -8,6 +8,11 @@ fun main() {
     val inputString = "Hello, World!"
     val reversedString = reverseArray(inputString)
     println("Reversed String: $reversedString")
+
+    val input = "Hello, World!"
+    val shift = 3
+    val encryptedString = caesarCipherEncrypt(input, shift)
+    println("Encrypted String: $encryptedString")
 }
 /**
  * This function takes in an array of integers and calculates the average value of the numbers.
@@ -92,7 +97,7 @@ fun caesarCipherEncrypt(input: String, shift: Int): String {
     for (char in input) {
         if (char.isLetter()) {
             val base = if (char.isLowerCase()) 'a' else 'A'
-            val shiftedChar = ((char - base + normalizedShift) % 26 + base).toChar()
+            val shiftedChar = (((char.toInt() - base.toInt() + normalizedShift) % 26 + base.toInt()).toChar())
             shiftedString.append(shiftedChar)
         } else {
             shiftedString.append(char)
@@ -101,3 +106,5 @@ fun caesarCipherEncrypt(input: String, shift: Int): String {
 
     return shiftedString.toString()
 }
+
+
