@@ -84,3 +84,20 @@ fun reverseArray(input: String): String {
     }
     return result
 }
+
+fun caesarCipherEncrypt(input: String, shift: Int): String {
+    val shiftedString = StringBuilder()
+    val normalizedShift = shift % 26 // Normalize the shift value to handle values outside the range of 0-25
+
+    for (char in input) {
+        if (char.isLetter()) {
+            val base = if (char.isLowerCase()) 'a' else 'A'
+            val shiftedChar = ((char - base + normalizedShift) % 26 + base).toChar()
+            shiftedString.append(shiftedChar)
+        } else {
+            shiftedString.append(char)
+        }
+    }
+
+    return shiftedString.toString()
+}
