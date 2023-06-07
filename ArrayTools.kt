@@ -1,6 +1,13 @@
 fun main() {
     averageArrayTester()
 }
+/**
+ * This function takes in an array of integers and calculates the average value of the numbers.
+ *
+ * @param inputArray
+ * - Array of Integers
+ * @return Double - Average value as a Double, or 0 if inputArray is empty
+ */
 fun arrayAverage(inputArray: Array<Int>): Double {
     if (inputArray.isEmpty()) { // Avoid divide by 0 in return
         return 0.0
